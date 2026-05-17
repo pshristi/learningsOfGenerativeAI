@@ -35,6 +35,7 @@ My compiled learning notes from courses on Generative AI.
   - [What Skills Enable](#what-skills-enable)
   - [Key Characteristics of Skills](#key-characteristics-of-skills)
   - [How Do Skills Work? - Progressive Disclosure](#how-do-skills-work---progressive-disclosure)
+  - [Skill Structure Examples](#skill-structure-examples)
   - [Skills vs Tools, MCP, and Subagents](#skills-vs-tools-mcp-and-subagents)
   - [SKILL.md File Structure](#skillmd-file-structure)
   - [Practical Guidance](#practical-guidance)
@@ -90,7 +91,7 @@ We repeatedly find and fix mistakes.
 
 | Technique | Description |
 |-----------|-------------|
-| Prompting | Craft effective prompts |
+| Prompting | |
 | Retrieval Augmented Generation (RAG) | Give LLM access to external data sources |
 | Fine-tune models | Adapt LLM to your task |
 | Pretrain models | Train LLM from scratch |
@@ -274,6 +275,10 @@ For complex workflows and variety of tasks, it becomes the challenge of planning
 
 #### Multi-Agent Collaboration
 
+**Example — System prompt:**
+
+> You have access to the following tools: {description of tools} Return a step-by-step plan to carry out the user's request.
+
 **Communication patterns for multi-agent systems:**
 
 - **Linear workflow:** plan of agents
@@ -388,12 +393,13 @@ Skills can contain a lot of information, and you may have hundreds of them. To p
 | Instructions | Main SKILL.md content | Loaded when triggered |
 | Resources | Reference files, scripts | Loaded as needed |
 
-### Skills vs Tools, MCP, and Subagents
+### Skill Structure Examples
 
-**Skill Structure Examples:**
 According to the Agent Skills Specification:
 - `SKILL.md` is required
 - Optional directories: `references`, `scripts`, and `assets`
+
+### Skills vs Tools, MCP, and Subagents
 
 **Skills vs MCP:**
 - **MCP:** Connects your agent to external systems and data (databases, APIs, services)
